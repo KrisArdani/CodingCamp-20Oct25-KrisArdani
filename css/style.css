@@ -1,14 +1,245 @@
+/* === STYLING DASAR & LATAR BELAKANG === */
+
+/* Reset dasar dan pengaturan font utama */
+
 .main-logo {
     height: 75px;
     width: 75px;
     background-color: darkgrey;
     border-radius: 50%;
     background-image: url(https://picsum.photos/200);
-    background-size: cover;
+    background-size: cover;}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Latar belakang gelap (dari Pilihan 3) */
+    color: #e0e0e0; /* Teks terang */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+    overflow-x: hidden; /* Mencegah scroll horizontal dari blur */
 }
 
+/* Efek Latar Belakang Gradien Buram */
+.blurry-gradient-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Di belakang konten */
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(63, 94, 251, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(252, 70, 107, 0.3) 0%, transparent 50%);
+    filter: blur(100px); 
+    opacity: 0.5;
+}
+
+/* Kontainer Utama */
+.main-content {
+    position: relative;
+    z-index: 10; /* Di depan latar belakang */
+    padding: 20px; /* Padding umum untuk konten */
+    max-width: 1200px; /* Batas lebar agar nyaman dibaca */
+    margin: 0 auto; /* Tengahkan konten */
+}
+
+/* === HEADER & NAVIGASI === */
 .main-header {
+    padding: 8px; /* (dari p-[8px]) */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo di kiri, Nav di kanan */
     align-items: center;
+}
+
+.main-header nav {
+    display: flex; /* (dari flex) */
+    gap: 4px; /* (dari gap-1) */
+}
+
+.main-header nav a {
+    border: 1px solid #e0e0e0; /* (dari border, warna disesuaikan) */
+    border-radius: 4px; /* (dari rounded) */
+    padding: 8px; /* (dari p-2) */
+    
+    /* Style tambahan untuk link */
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.main-header nav a:hover {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+/* === GARIS PEMISAH === */
+hr {
+    border: 0;
+    border-top: 1px solid #444; /* Garis horizontal yang halus */
+    margin: 2rem 0;
+}
+
+/* === BAGIAN (SECTIONS) === */
+
+/* Style umum untuk semua section */
+.hero-section,
+.profile-section,
+.portfolio-section,
+.message-section {
+    padding: 16px; /* (dari p-4) */
+    min-height: 500px; /* (dari min-h-[500px]) */
+}
+
+/* === TYPOGRAPHY (TEKS) === */
+h1 {
+    font-size: 1.875rem; /* (dari text-3xl) */
+    font-weight: 700; /* (dari font-bold) */
+    margin-bottom: 1rem; /* (dari mb-4) */
+}
+
+h2 {
+    font-size: 1.5rem; /* (dari text-2xl) */
+    font-weight: 700; /* (dari font-bold) */
+    margin-bottom: 1rem; /* (dari mb-4) */
+}
+
+p {
+    font-size: 1.125rem; /* (dari text-lg) */
+    line-height: 1.6; /* Tambahan agar mudah dibaca */
+}
+
+/* === FORMULIR KONTAK === */
+form label {
+    display: block; /* (dari block) */
+    margin-bottom: 8px; /* (dari mb-2) */
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    border: 1px solid #ccc; /* (dari border) */
+    padding: 8px; /* (dari p-2) */
+    margin-bottom: 16px; /* (dari mb-4) */
+    width: 100%; /* (dari w-full) */
+    
+    /* Style tambahan agar input terlihat bagus di mode gelap */
+    background-color: #f0f0f0;
+    color: #121212;
+    border-radius: 4px;
+    box-sizing: border-box; /* Penting agar padding tidak merusak width: 100% */
+}
+
+/* Tombol Kirim */
+/* (Menggunakan selector '+' untuk memilih tombol setelah form) */
+form + button {
+    background-color: #3b82f6; /* (dari bg-blue-500) */
+    color: #ffffff; /* (dari text-white) */
+    padding: 10px 16px; /* (dari p-2, sedikit disesuaikan agar lebih mirip tombol) */
+    border-radius: 4px; /* (dari rounded) */
+    
+    /* Style tambahan */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+form + button:hover {
+    background-color: #2563eb; /* Warna hover yang sedikit lebih gelap */
+}
+
+
+/* === FOOTER === */
+.footer-content {
+    padding: 16px; /* (dari p-4) */
+    text-align: center; /* (dari text-center) */
+    border-top: 1px solid #444; /* Garis pemisah di atas footer */
+    margin-top: 2rem;
+}
+
+.footer-content p {
+    font-size: 0.875rem; /* (dari text-sm) */
+    color: #aaa;
+}
+
+/* === STYLE TAMBAHAN UNTUK FORMULIR & OUTPUT === */
+
+/* Kontainer utama 2 kolom */
+.message-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    gap: 30px; /* Jarak antara form dan output */
+}
+
+/* Kolom Kiri (Form) */
+.form-wrapper {
+    flex: 1; /* Mengisi setengah ruang */
+    min-width: 300px; /* Lebar minimum sebelum pindah ke bawah */
+}
+
+/* Kolom Kanan (Output) */
+.output-wrapper {
+    flex: 1; /* Mengisi setengah ruang */
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, 0.2); /* Latar belakang semi-transparan */
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.output-wrapper h3 {
+    margin-top: 0;
+    font-size: 1.5rem; /* (Ukuran dari h2 di file asli Anda) */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+/* Mengganti selector 'form + button' agar berfungsi */
+.form-wrapper button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.form-wrapper button:hover {
+    background-color: #2563eb;
+}
+
+/* Style untuk area output */
+#output-display .placeholder {
+    font-style: italic;
+    color: #999;
+}
+
+.output-item {
+    margin-bottom: 15px;
+}
+
+.output-item strong {
+    color: #3b82f6; /* Warna biru agar seragam */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.output-item span,
+.output-item pre {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 4px;
+    display: block;
+    word-wrap: break-word; /* Agar teks tidak keluar kotak */
+    white-space: pre-wrap; /* Agar format pesan (enter) tetap terjaga */
 }

@@ -4,88 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Yama</title>
-
-    <!-- CSS External File -->
+    <title>Portfolio Kris Ardani</title>
+    
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
+    
+    <div class="blurry-gradient-effect"></div>
+    
+    <div class="main-content">
 
-    <!-- Header Content -->
-    <header class="main-header p-[8px]">
-        <!-- Logo Website -->
-        <div class="main-logo"></div>
+        <header class="main-header">
+            <div class="main-logo">
+                </div>
 
-        <!-- Navigation Menu -->
-        <nav class="flex gap-1">
-            <a class="border rounded p-2" href="#home-section">Home</a>
-            <a class="border rounded p-2" href="#profile-section">Our Profile</a>
-            <a class="border rounded p-2" href="#portfolio-section">Portfolio</a>
-            <a class="border rounded p-2" href="#message-section">Message Us</a>
-        </nav>
-    </header>
+            <nav>
+                <a href="#home-section">Home</a>
+                <a href="#profile-section">Our Profile</a>
+                <a href="#portfolio-section">Portfolio</a>
+                <a href="#message-section">Message Us</a>
+            </nav>
+        </header>
 
-    <hr />
+        <hr />
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home -->
-        <section id="home-section" class="hero-section p-4 min-h-[500px]">
-            <h1 class="text-3xl font-bold mb-4"><span id="greet-name"></span>Welcome to My Portfolio</h1>
-            <p class="text-lg">This is a brief introduction about myself and my work.</p>
+        <section id="home-section" class="hero-section">
+            <h1><span id="greet-name"></span>Welcome to My Portfolio</h1>
+            <p>Halo! Saya Kris Ardani <br> seorang mahasiswa semester 3 di jurusan Teknik Informatika.
+Saat ini, saya sedang giat mendalami fundamental Struktur Data, Pengembangan Web. Saya sangat antusias untuk mengaplikasikan teori yang saya pelajari ke dalam proyek-proyek praktis. <br>
+Portofolio ini merupakan wadah bagi eksperimen dan hasil kerja awal saya di bidang coding dan pengembangan. Saya terus mencari peluang untuk belajar, berkolaborasi, dan membangun solusi digital yang efisien.
+Mari terhubung! Saya terbuka untuk proyek freelance skala kecil atau diskusi seputar teknologi </p>
         </section>
 
         <hr />
 
-        <!-- Our Profile -->
-        <section id="profile-section" class="profile-section p-4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Our Profile</h2>
-            <p class="text-lg">Details about my background, skills, and experiences.</p>
+        <section id="profile-section" class="profile-section">
+            <h2>Our Profile</h2>
+            <p>Details about my background, skills, and experiences.</p>
         </section>
 
         <hr />
 
-        <!-- Portfolio -->
-        <section id="portfolio-section" class="portfolio-section p-4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
-            <p class="text-lg">Showcase of my projects and accomplishments.</p>
+        <section id="portfolio-section" class="portfolio-section">
+            <h2>Portfolio</h2>
+            <p>Showcase of my projects and accomplishments.</p>
         </section>
 
         <hr />
 
-        <!-- Message Us -->
-        <section id="message-section" class="message-section p-4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Message Us</h2>
-            <p class="text-lg">Feel free to reach out for collaborations or inquiries.</p>
+       <section id="message-section" class="message-section">
+    <h2>Message Us</h2>
+    <p>Feel free to reach out for collaborations or inquiries.</p>
 
-            <form>
-                <label for="name" class="block mb-2">Name:</label>
-                <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full" required>
+    <div class="message-container">
 
-                <label for="email" class="block mb-2">Email:</label>
-                <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full" required>
+        <div class="form-wrapper">
+            <form id="contact-form">
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" name="name" required>
 
-                <label for="message" class="block mb-2">Message:</label>
-                <textarea id="message-input" name="message" class="border p-2 mb-4 w-full" rows="4" required></textarea>
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" name="email" required>
+
+                <label for="message-input">Message:</label>
+                <textarea id="message-input" name="message" rows="4" required></textarea>
+                
+                <button type="button" id="send-button">Send Message</button>
             </form>
-
-            <button onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded">Send Message</button>
-        </section>
-    </main>
-
-    <!-- Footer Content -->
-    <footer>
-        <div class="footer-content p-4 text-center">
-            <p class="text-sm">&copy; 2025 Yama's Portfolio. All rights reserved.</p>
         </div>
-    </footer>
 
-    <!-- Javascript External File -->
-    <script src="js/script.js"></script>
+        <div class="output-wrapper">
+            <h3>Submitted Data:</h3>
+            
+            <div id="output-display">
+                <p class="placeholder">Your submitted data will appear here...</p>
+                
+                <div class="output-item" id="output-name" style="display: none;">
+                    <strong>Name:</strong> <span id="output-name-value"></span>
+                </div>
+                <div class="output-item" id="output-email" style="display: none;">
+                    <strong>Email:</strong> <span id="output-email-value"></span>
+                </div>
+                <div class="output-item" id="output-message" style="display: none;">
+                    <strong>Message:</strong> <pre id="output-message-value"></pre>
+                </div>
+            </div>
+
+        </div>
+
+    </div> </section>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 KrisArdani's Portfolio. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div> <script src="js/script.js"></script>
 </body>
 
 </html>
