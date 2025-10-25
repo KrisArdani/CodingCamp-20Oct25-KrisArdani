@@ -1,26 +1,29 @@
+
+///NOTE: SEMUA KOMENTAR DISINI SENGAJA SAYA BUAT YA KAK, UNTUK PROSES BELAJAR SAYA DAN BUKAN DARI AI :p
+
 welcomeSpeech();
 
 function welcomeSpeech() {
-    /// Show prompt to ask for user's name
+    /// promt menanyakan nama pengunjung
     let name = prompt("Enter your name:");
 
-    // Greet the user with their name
+    // menyapa dengan nama mereka
     document.getElementById('greet-name').innerHTML = `Hi ${name}, `;
 }
 
-/// Function to validate form inputs
+/// Function untuk validasi input
 function validateForm() {
     /// Get form input values
     const name = document.getElementById('name-input').value;
     const email = document.getElementById('email-input').value;
     const message = document.getElementById('message-input').value;
 
-    /// Check if any field is empty
+    /// memeriksa apakah ada field yang kosong
     if (name === "" || email === "" || message === "") {
         /// Show alert if any field is empty
         alert("All fields are required!");
     } else {
-        /// Show success message
+        /// menunampilkan pesan sukses jika semua field terisi
         alert(`Thank you ${name}, your message has been submitted successfully!`);
     }
 }

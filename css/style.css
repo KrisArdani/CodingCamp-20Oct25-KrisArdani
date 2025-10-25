@@ -1,7 +1,7 @@
-/* === STYLING DASAR & LATAR BELAKANG === */
+
+/*NOTE: SEMUA KOMENTAR DISINI SENGAJA SAYA BUAT YA KAK, UNTUK PROSES BELAJAR SAYA DAN BUKAN DARI AI :p */
 
 /* Reset dasar dan pengaturan font utama */
-
 .main-logo {
     height: 75px;
     width: 75px;
@@ -14,7 +14,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Latar belakang gelap (dari Pilihan 3) */
+    background-color: #121212; /* Latar belakang gelap */
     color: #e0e0e0; /* Teks terang */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     position: relative;
@@ -47,21 +47,21 @@ body, html {
 
 /* === HEADER & NAVIGASI === */
 .main-header {
-    padding: 8px; /* (dari p-[8px]) */
+    padding: 8px;
     display: flex;
     justify-content: space-between; /* Logo di kiri, Nav di kanan */
     align-items: center;
 }
 
 .main-header nav {
-    display: flex; /* (dari flex) */
-    gap: 4px; /* (dari gap-1) */
+    display: flex;
+    gap: 4px; 
 }
 
 .main-header nav a {
-    border: 1px solid #e0e0e0; /* (dari border, warna disesuaikan) */
-    border-radius: 4px; /* (dari rounded) */
-    padding: 8px; /* (dari p-2) */
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px; 
+    padding: 8px; 
     
     /* Style tambahan untuk link */
     color: #e0e0e0;
@@ -89,42 +89,42 @@ hr {
 .profile-section,
 .portfolio-section,
 .message-section {
-    padding: 16px; /* (dari p-4) */
-    min-height: 500px; /* (dari min-h-[500px]) */
+    padding: 16px; 
+    min-height: 350px; 
 }
 
 /* === TYPOGRAPHY (TEKS) === */
 h1 {
-    font-size: 1.875rem; /* (dari text-3xl) */
-    font-weight: 700; /* (dari font-bold) */
-    margin-bottom: 1rem; /* (dari mb-4) */
+    font-size: 1.875rem; 
+    font-weight: 700; 
+    margin-bottom: 1rem; 
 }
 
 h2 {
-    font-size: 1.5rem; /* (dari text-2xl) */
-    font-weight: 700; /* (dari font-bold) */
-    margin-bottom: 1rem; /* (dari mb-4) */
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    margin-bottom: 1rem; 
 }
 
 p {
-    font-size: 1.125rem; /* (dari text-lg) */
+    font-size: 1.125rem; 
     line-height: 1.6; /* Tambahan agar mudah dibaca */
 }
 
 /* === FORMULIR KONTAK === */
 form label {
-    display: block; /* (dari block) */
-    margin-bottom: 8px; /* (dari mb-2) */
+    display: block;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    border: 1px solid #ccc; /* (dari border) */
-    padding: 8px; /* (dari p-2) */
-    margin-bottom: 16px; /* (dari mb-4) */
-    width: 100%; /* (dari w-full) */
+    border: 1px solid #ccc; 
+    padding: 8px; 
+    margin-bottom: 16px; 
+    width: 100%; 
     
     /* Style tambahan agar input terlihat bagus di mode gelap */
     background-color: #f0f0f0;
@@ -136,10 +136,10 @@ form textarea {
 /* Tombol Kirim */
 /* (Menggunakan selector '+' untuk memilih tombol setelah form) */
 form + button {
-    background-color: #3b82f6; /* (dari bg-blue-500) */
-    color: #ffffff; /* (dari text-white) */
-    padding: 10px 16px; /* (dari p-2, sedikit disesuaikan agar lebih mirip tombol) */
-    border-radius: 4px; /* (dari rounded) */
+    background-color: #3b82f6; 
+    color: #ffffff; 
+    padding: 10px 16px; 
+    border-radius: 4px; 
     
     /* Style tambahan */
     border: none;
@@ -156,14 +156,14 @@ form + button:hover {
 
 /* === FOOTER === */
 .footer-content {
-    padding: 16px; /* (dari p-4) */
-    text-align: center; /* (dari text-center) */
+    padding: 16px;
+    text-align: center; 
     border-top: 1px solid #444; /* Garis pemisah di atas footer */
     margin-top: 2rem;
 }
 
 .footer-content p {
-    font-size: 0.875rem; /* (dari text-sm) */
+    font-size: 0.875rem; 
     color: #aaa;
 }
 
@@ -194,7 +194,7 @@ form + button:hover {
 
 .output-wrapper h3 {
     margin-top: 0;
-    font-size: 1.5rem; /* (Ukuran dari h2 di file asli Anda) */
+    font-size: 1.5rem; 
     font-weight: 700;
     margin-bottom: 1rem;
     border-bottom: 1px solid #555;
